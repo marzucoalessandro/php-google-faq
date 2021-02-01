@@ -61,12 +61,12 @@ $database = [
           }
 
        h2 {
-          font-size: 2.5rem;
+          font-size: 2rem;
           }
 
         p {
           line-height: 30px;
-          font-size: 1.5rem;
+          font-size: 1rem;
           font-weight: 300;
           }
      </style>
@@ -79,9 +79,6 @@ $database = [
         echo "<p>" . $item . "</p>";
         }
       }
-
-
-
       ?>
-   </body>
- </html>
+    </body>
+    </html>
