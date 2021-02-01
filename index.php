@@ -33,7 +33,7 @@ $database = [
   "answer" => "In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca    non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio."
   ]
 ];
-var_dump($database);
+// var_dump($database);
 
  ?>
 
@@ -41,13 +41,32 @@ var_dump($database);
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
-     <title></title>
+     <title>php-google-faq</title>
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+     <style media="screen">
+
+      body{
+          font-family: 'Roboto', sans-serif;
+          padding: 40px 20px;
+          }
+
+       h2 {
+          font-size: 2.5rem;
+          }
+
+        p {
+
+          }
+     </style>
    </head>
    <body>
+
      <?php foreach ($database as $key => $value) {
-        var_dump($value["question"]);
-        var_dump($value["answer"]);
-     }
+        echo "<h2>" .  $value["question"] . "</h2>";
+        echo "<p>" .  $value["answer"] . "</p>";
+      }
+
 
 
       ?>
